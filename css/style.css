@@ -1,0 +1,50 @@
+html,
+body{
+	height: 100%;
+
+}
+img{
+	max-width: 100%;
+}
+
+#cover {
+    background:#222 url('../images/head.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+#cover-caption{
+	width: 100%;
+}
+#events{
+    background:url('../images/events.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: bottom;
+}
+.events-text
+{
+	background:rgba(0,0,0,0.8);
+	color:white;
+	padding: 50px;
+	margin:14px 15px; 
+
+}
+
+#footer-main{
+	background: #222;
+	color: white;
+	font-size: 14px;
+	padding-top: 40px;
+}
+#loogo,#logo{
+	text-shadow: 3px 1px 1px red;
+	font-family:  Bobber;
+}
+#main{
+	height: auto;
+	width: 100%;
+}
