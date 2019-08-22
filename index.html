@@ -11,59 +11,90 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Hello, world!</title>
+    <title>Harricson</title>
   </head>
-  <body>
- 
- 	<section id="cover">
- 		<div id="cover-caption">
- 			<div class="container">
- 				<div class="col-sm-10 col-sm-offset-1">
- 					<h1 id="logo">Book Your Tickets</h1>
- 						
+<body>
+<!--navigation bar fixed top-->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    	<a href="#" class="navbar-brand" id="logo">Harrison</a>
+    	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        	<span class="navbar-toggler-icon"></span>
+    	</button>
 
- 	<form class="form-inline">
- 		<div class="form-group">
- 			<label for="" class="sr-only">Name</label>
- 			<input type="text" class="form-control form-control-lg" placeholder="Name">
- 		</div>
- 		<div class="form-group">
- 			<label for="" class="sr-only">email</label>
- 				<input type="text" class="form-control form-control-lg" placeholder="Mail Id">
- 		</div>
- 		<button type="submit" class="btn btn-lg btn-success">okay go!</button>
- 	</form>
- 					
- 				</div>
- 			</div>
- 		</div>
- 	</div>
- 
-</section>
-<!--navigation panel-->
-<nav class="navbar navbar-dark bg-inverse navbar-expand-lg" id="main">
-<a class="navbar-brand active"  id ="loogo" href="#">Harrison</a>
-<ul class=" nav navbar-nav">
-	<li class="nav-item">
-		<a class="nav-link" href="#">Offers<span class="sr-only">(current)</span></a>
-	</li>
-	<li class="nav-item">
-		<a href="#" class="nav-link"> Movies</a>
-	</li>
-	<li class="nav-item">
-		<a href="#" class="nav-link"> Events</a>
-	</li>
-	<li class="nav-item">
-		<a href="#" class="nav-link"> About</a>
-	</li>
-</ul>
-<form class="form-inline pull-xs-right">
-	<input type="text" class="form-control" placeholder="Search">
-	<button type="submit" class="btn btn-success-outline">Search</button>
-</form>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link">Events</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Movies</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Evaru</a>
+                    <a href="#" class="dropdown-item">Ismart Shankar</a>
+                    <a href="#" class="dropdown-item">Mission Mangal</a>
+                    <a href="#" class="dropdown-item">Lion King</a>
+                    <a href="#" class="dropdown-item">Angry Birds2</a>
+                    <a href="#" class="dropdown-item">Kurukshetra</a>
+				</div>
+            </div>
+            <a href="#" class="nav-item nav-link">Services</a>
+        </div>
+        <form class="form-inline ml-auto">
+            <div class="input-group">                    
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <div class="navbar-nav">
+        			&nbsp;
+                    <button type="button" id="loading" data-toggle="modal" data-target="#myModal" class="btn btn-primary">
+                    	<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+						<span class="sr-only">Loading...</span>
+					</button>
+
+					<div class="modal" id="myModal" tabindex="-1" role="dialog">
+  						<div class="modal-dialog">
+    						<div class="modal-content">
+      							<div class="modal-header">
+      								<button class="close" data-dismiss="modal">&times;</button>
+      							</div>
+      							<!--modal loginform-->
+      						<div class="modal-body">
+                             
+								<div class="login-form">
+    								<form>
+        								<h2 class="text-center" style="text-shadow: 2px 0px 1px red;">Sign in</h2>       
+        								<div class="form-group">
+            								<input type="text" class="form-control" placeholder="Username" required="required">
+        								</div>
+        								<div class="form-group">
+            								<input type="password" class="form-control" placeholder="Password" required="required">
+        								</div>
+        								<div class="form-group">
+            								<button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        								</div>
+        								<div class="clearfix">
+            									<label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+            									<a href="#" class="pull-right">Forgot Password?</a>
+        								</div>        
+    								</form>
+    								<p class="text-center"><a href="#">Create an Account</a></p>
+								</div>	
+
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      						</div>
+    						</div>
+  						</div>
+					</div>						
+                </div>
+        </div>
 </nav>
-<!--carousel-->
-  
+
+
+<!--carousel-->  
 <section id="carousel">
 	<div class="carousel slide" id="carousel-home" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -102,12 +133,12 @@
 		</div>
 
 
-		<a class="carousel-control left" data-target="#carousel-home" data-slide="prev" role="button">
-			<span class="icon-prev" ></span>
+		<a class="carousel-control-prev" data-target="#carousel-home" data-slide="prev" role="button">
+			<span class="carousel-control-prev-icon" ></span>
 			<span class="sr-only">previous</span>
 		</a>
-		<a class="carousel-control right" data-target="#carousel-home" data-slide="next" role="button">
-			<span class="icon-next" ></span>
+		<a class="carousel-control-next" data-target="#carousel-home" data-slide="next" role="button">
+			<span class="carousel-control-next-icon" ></span>
 			<span class="sr-only">next</span>
 		</a>
 	</div>
@@ -122,8 +153,8 @@
 			</div>
 			<img src="images/evaru.webp" alt="Evaru movie">
 			<div class="card-block">
-				<p class="card-text">When a high-ranking police official is killed by his alleged rape victim, Sub-inspector Vikram Vasudev is entrusted with investigating what seems like an open-and-shut case. As he delves deeper, Vikram finds the case spiralling into a dark tale filled with unexpected surprises.</p>
-				<button type="button" class="btn btn-success-outline" data-toggle="modal">Reviews
+				<p class="card-text">When a high-ranking police official is killed by his alleged rape victim, Sub-inspector Vikram Vasudev is entrusted with investigating what seems like an open-and-shut case. As he delves deeper, Vikram finds the case spiralling into a dark tale filled with unexpected surprises.</p><br>
+				<button type="button" class="btn btn-primary" data-toggle="modal">Book
 				</button>
 			</div>
 		</div>
@@ -134,8 +165,8 @@
 			</div>
 			<img src="images/missionmangal.webp" alt="mm movie">
 			<div class="card-block">
-				<p class="card-text">Inspired by true events that led up to ISRO`s Mars Orbiter Mission (Mangalyaan), the film tells the story of a group of scientists who overcame their professional and personal tribulations to mastermind the greatest accomplishment in Indian space history. </p>
-				<button type="button" class="btn btn-success-outline" data-toggle="modal">Reviews
+				<p class="card-text">Inspired by true events that led up to ISRO`s Mars Orbiter Mission (Mangalyaan), the film tells the story of a group of scientists who overcame their professional and personal tribulations to mastermind the greatest accomplishment in Indian space history. </p><br>
+				<button type="button" class="btn btn-primary" data-toggle="modal">Book
 				</button>
 			</div>
 		</div>
@@ -146,8 +177,8 @@
 			</div>
 			<img src="images/angrybirds.jpg" alt="angrybirds movie">
 			<div class="card-block">
-				<p class="card-text">The epic battle between the grumpy bunch of flightless birds and the crafty green pigs reaches the next level in this sequel to the hit 2016 film.</p>
-				<button type="button" class="btn btn-success-outline" data-toggle="modal">Reviews
+				<p class="card-text">The epic battle between the grumpy bunch of flightless birds and the crafty green pigs reaches the next level in this sequel to the hit 2016 film.</p><br><br><br><br>
+				<button type="button" class="btn btn-primary" data-toggle="modal">Book
 				</button>
 			</div>
 		</div>
@@ -161,8 +192,8 @@
 			</div>
 			<img src="images/ismart.jpg" alt="Evaru movie">
 			<div class="card-block">
-				<p class="card-text">Rowdy Shankar is in trouble. He he has a score to settle with the people who wronged him and to make things worse, the cops are after him. But the real problem starts when a chip is inserted into his brain, affecting his memories. Can Shankar outsmart those conspiring against him?</p>
-				<button type="button" class="btn btn-success-outline" data-toggle="modal">Reviews
+				<p class="card-text">Rowdy Shankar is in trouble. He he has a score to settle with the people who wronged him and to make things worse, the cops are after him. But the real problem starts when a chip is inserted into his brain, affecting his memories. Can Shankar outsmart those conspiring against him?</p><br><br>
+				<button type="button" class="btn btn-primary" data-toggle="modal">Book
 				</button>
 			</div>
 		</div>
@@ -173,8 +204,8 @@
 			</div>
 			<img src="images/lionking.webp" alt="mm movie">
 			<div class="card-block">
-				<p class="card-text">"The Lion King" journeys to the African savanna where a future king must overcome betrayal and tragedy to assume his rightful place on Pride Rock. </p>
-				<button type="button" class="btn btn-success-outline" data-toggle="modal">Reviews
+				<p class="card-text">"The Lion King" journeys to the African savanna where a future king must overcome betrayal and tragedy to assume his rightful place on Pride Rock. </p><br><br><br><br><br>
+				<button type="button" class="btn btn-primary" data-toggle="modal">Book
 				</button>
 			</div>
 		</div>
@@ -186,7 +217,7 @@
 			<img src="images/super30.jpg" alt="angrybirds movie">
 			<div class="card-block">
 				<p class="card-text">Anand Kumar, a Mathematics genius from a modest family in Bihar who is made to believe that only a King's son can become a king is on a mission to prove that even the poor man can create some of the world's most genius minds. He starts a training program named 'Super 30' to help 30 IIT aspirants crack the entrance test and make them highly successful professionals.</p>
-				<button type="button" class="btn btn-success-outline" data-toggle="modal">Reviews
+				<button type="button" class="btn btn-primary" data-toggle="modal">Book
 				</button>
 			</div>
 
@@ -223,18 +254,22 @@
                 </div>
                 <div class="col-sm-3">
                     <ul class="list-unstyled">
-                        <li><a href="">home</a></li>
-                        <li><a href="">what we do</a></li>
-                        <li><a href="">about</a></li>
-                        <li><a href="">latest</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">what we do</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">latest</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <ul class="list-unstyled">
-                        <li><a href=""><span><i class="fab fa-facebook-square"></i></span>facebook</a></li>
-                        <li><a href="">twitter</a></li>
-                        <li><a href="">youtube</a></li>
-                        <li><a href="">linkedin</a></li>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+						<span id="socialmedia">facebook</span></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+						<span id="socialmedia">twitter</span></a></li>
+                        <li><i class="fa fa-youtube" aria-hidden="true"></i>
+						<a href=""><span id="socialmedia">Youtube</span></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>
+						<span id="socialmedia">linkedin</span></a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">

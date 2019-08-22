@@ -40,11 +40,19 @@ img{
 	font-size: 14px;
 	padding-top: 40px;
 }
-#loogo,#logo{
+#logo{
 	text-shadow: 3px 1px 1px red;
 	font-family:  Bobber;
+	font-size: 30px;
 }
 #main{
 	height: auto;
 	width: 100%;
+}
+#loading{
+	font-size: 6px; 
+}
+#socialmedia{
+	color: white;
+	font-size: 14px;
 }
